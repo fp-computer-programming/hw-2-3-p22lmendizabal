@@ -4,17 +4,20 @@
 # one death every 12 seconds
 # one migrant every 645 seconds 
 
-start = 331,832,432
+start = 331832432
 
-hour = 60
+seconds = 60
 
 minute = 60
+
+hour = 60
 
 day = 24
 
 year = 365
 
+death = 12
 
-
-birth_one_year = (minute /8 * hour * day * year) + (minute/8 * hour * day)
-print(birth_one_year)
+immigrant = 645
+new_pop = (seconds * minute * hour * day * year / 25 /death + start) + ( seconds + minute + hour + day / 25 / death ) +( minute + hour + day + year / immigrant)
+print(" The population on September 24th 2021 is " + str(new_pop) + " people.")
